@@ -1,0 +1,9 @@
+2017-08-26 12:52:40.035  INFO 9748 --- [main] com.google.ssm.SsmApplication            : Starting SsmApplication on Lenovo-PC with PID 9748 (E:\workspace\idea\ssm\target\classes started by think in E:\workspace\idea\ssm)
+2017-08-26 12:52:40.043  INFO 9748 --- [main] com.google.ssm.SsmApplication            : No active profile set, falling back to default profiles: default
+2017-08-26 12:52:41.277  WARN 9748 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'studentDao' and 'com.google.ssm.dao.StudentDao' mapperInterface. Bean already defined with the same name!
+2017-08-26 12:52:41.278  WARN 9748 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2017-08-26 12:52:42.237  INFO 9748 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-26 12:52:42.239  INFO 9748 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-26 12:52:42.363  INFO 9748 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-26 12:52:43.913  INFO 9748 --- [main] com.google.ssm.SsmApplication            : Started SsmApplication in 4.484 seconds (JVM running for 5.736)
+2017-08-26 12:52:50.678  INFO 9748 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
