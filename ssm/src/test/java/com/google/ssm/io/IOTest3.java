@@ -5,7 +5,7 @@ import java.io.*;
 public class IOTest3 {
 
     public static void main(String[] args) throws Exception {
-        File file = new File("d:\\a.pdf");
+        File file = new File("e:\\a.pdf");
         BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(file));
         BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream("d:\\c.pdf"));
 
