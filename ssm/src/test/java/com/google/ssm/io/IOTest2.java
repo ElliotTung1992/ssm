@@ -15,7 +15,7 @@ public class IOTest2 {
 
 
         int len = 0;
-        byte[] b = new byte[1024];
+        byte[] b = new byte[8*1024];
         while ((len = fileInputStream.read(b)) != -1){
             outputStream.write(b, 0, len);
         }
@@ -24,7 +24,6 @@ public class IOTest2 {
 
         System.out.println(end - start);
 
-        outputStream.flush();
         outputStream.close();
         fileInputStream.close();
     }
