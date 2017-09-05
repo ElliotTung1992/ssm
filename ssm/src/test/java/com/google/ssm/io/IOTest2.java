@@ -7,9 +7,9 @@ import java.io.FileOutputStream;
 public class IOTest2 {
 
     public static void main(String[] args) throws Exception {
-        File file = new File("e:\\a.mp4");
+        File file = new File("d:\\a.pdf");
         FileInputStream fileInputStream = new FileInputStream(file);
-        FileOutputStream outputStream = new FileOutputStream("e:\\b.mp4");
+        FileOutputStream outputStream = new FileOutputStream("d:\\b.pdf");
 
         long start = System.currentTimeMillis();
 
