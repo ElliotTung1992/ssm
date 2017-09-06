@@ -1,4 +1,4 @@
-package com.google.ssm.io;
+package com.google.ssm.java.io;
 
 import java.io.File;
 import java.io.FileInputStream;

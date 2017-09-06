@@ -1,4 +1,4 @@
-package com.google.ssm.io;
+package com.google.ssm.java.io;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
