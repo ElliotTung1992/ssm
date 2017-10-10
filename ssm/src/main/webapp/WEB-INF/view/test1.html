@@ -8,11 +8,14 @@
         $(function () {
             $('#send').click(function () {
                 $.get('/test/aaa.do',{
-                    username : $('username').val(),
-                    content : $('content').val()
+                    username : $('#username').val(),
+                    content : $('#content').val()
                 },function (data) {
-
-                }, 'json');
+                    var id = data.id;
+                    var name = data.name;
+                    var name1 = data.users[0].name;
+                    alert(name1);
+                },'json');
             });
         });
     </script>
