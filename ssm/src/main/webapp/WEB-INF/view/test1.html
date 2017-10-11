@@ -7,15 +7,30 @@
     <script>
         $(function () {
             $('#send').click(function () {
-                $.get('/test/aaa.do',{
-                    username : $('#username').val(),
-                    content : $('#content').val()
-                },function (data) {
-                    var id = data.id;
-                    var name = data.name;
-                    var name1 = data.users[0].name;
-                    alert(name1);
-                },'json');
+//                $.get('/test/aaa.do',{
+//                    username : $('#username').val(),
+//                    content : $('#content').val()
+//                },function (data) {
+//                    var id = data.id;
+//                    var name = data.name;
+//                    var name1 = data.users[0].name;
+//                    alert(name1);
+//                },'json');
+//                $.post('/test/aaa.do',{
+//                    username : $('#username').val(),
+//                    content : $('#content').val()
+//                },function (data) {
+//                    var id = data.id;
+//                    var name = data.name;
+//                    var name1 = data.users[0].name;
+//                    alert(name1);
+//                },'json');
+//                $.post('/test/aaa.do', $('#form1').serialize(),function (data) {
+//                    var id = data.id;
+//                    var name = data.name;
+//                    var name1 = data.users[0].name;
+//                    alert(name1);
+//                },'json');
             });
         });
     </script>
@@ -25,6 +40,7 @@
         <p>评论:</p>
         <p>姓名: <input type="text" name="username" id="username" /></p>
         <p>内容: <textarea name="content" id="content" ></textarea></p>
+        <p>内容: <textarea name="content1" id="content1" ></textarea></p>
         <p><input type="button" id="send" value="提交"/></p>
     </form>
 </body>
