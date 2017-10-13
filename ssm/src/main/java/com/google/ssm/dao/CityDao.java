@@ -20,7 +20,7 @@ public interface CityDao {
      */
     City findByName(@Param("cityName") String cityName);
 
-    List<OrderDetail> getAllM();
+//    List<OrderDetail> getAllM();
 
     void mybatisInsert();
 }

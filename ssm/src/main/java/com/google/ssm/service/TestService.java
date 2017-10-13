@@ -36,8 +36,8 @@ public class TestService {
 
 
     public void getAllM() {
-        List<OrderDetail> allM = cityDao.getAllM();
-        System.out.println(allM.size());
+        //List<OrderDetail> allM = cityDao.getAllM();
+        //System.out.println(allM.size());
     }
 
 
@@ -119,7 +119,7 @@ public class TestService {
 
     //mybatis
     public void mybatis(){
-        List<OrderDetail> allM = cityDao.getAllM();
+//        List<OrderDetail> allM = cityDao.getAllM();
     }
 
     //jdbc

@@ -20,10 +20,10 @@
 		from city
 		where city_name = #{cityName}
 	</select>
-	
-	<select id="getAllM" resultType="OrderDetail">
-		select * from tb_order_detail
-	</select>
+
+	<!--<select id="getAllM" resultType="OrderDetail">-->
+		<!--select * from tb_order_detail-->
+	<!--</select>-->
 
 	<insert id="mybatisInsert">
 		INSERT INTO `test`.`student` (`name`, `age`)
