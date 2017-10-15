@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
-			<version>1.0.0</version>
+			<version>1.2.1</version>
 		</dependency>
 
 		<!--mapper-->
