@@ -42,8 +42,15 @@ spring:
 mybatis:
   configuration:
    cache-enabled: false
+
+
+#logging:
+#  level.com.google.ssm: debug
 logging:
+  level.root: info
   level.com.google.ssm: debug
+  path: logs/
+  file: log.log
   
 #mapper
 mapper:
