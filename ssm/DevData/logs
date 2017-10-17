@@ -1,0 +1,4 @@
+2017-10-17 21:09:22.652 |-WARN  [restartedMain] org.mybatis.spring.mapper.ClassPathMapperScanner [166] -| No MyBatis mapper was found in '[com.google.ssm]' package. Please check your configuration.
+2017-10-17 21:09:22.791 |-WARN  [restartedMain] org.springframework.context.annotation.ConfigurationClassPostProcessor [373] -| Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2017-10-17 21:09:56.963 |-WARN  [http-nio-8081-exec-1] com.google.ssm.web.TestController [25] -| This is a warn message
+2017-10-17 21:09:56.963 |-ERROR [http-nio-8081-exec-1] com.google.ssm.web.TestController [26] -| This is an error message

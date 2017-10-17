@@ -35,6 +35,10 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: Asia/Shanghai
 
+  #logback配置
+  profiles:
+    active: dev
+
 ## Mybatis
 #mybatis.typeAliasesPackage=com.google.ssm.domain
 #mybatis.mapperLocations=classpath:mapper/*.xml
@@ -46,11 +50,12 @@ mybatis:
 
 #logging:
 #  level.com.google.ssm: debug
-logging:
-  level.root: info
-  level.com.google.ssm: debug
-  path: logs/
-  file: log.log
+#logging:
+#  level.root: info
+#  level.com.google.ssm: debug
+#  path: logs/
+#  file: log.log
+
   
 #mapper
 mapper:
@@ -67,5 +72,8 @@ pagehelper:
 
 server:
   port: 8081
+
+logging:
+  config: classpath:logback-spring.xml
 
 
