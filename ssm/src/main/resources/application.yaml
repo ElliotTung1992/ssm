@@ -76,4 +76,7 @@ server:
 logging:
   config: classpath:logback-spring.xml
 
+ssm:
+  uploadFile: d:/upload/
+
 
