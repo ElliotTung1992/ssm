@@ -1,14 +1,12 @@
 
-###################  ÏîÄ¿Æô¶¯¶Ë¿Ú  ###################
 server:
   port: 8060
 
-###################  ÉèÖÃÈÕÖ¾  ###################
+
 logging:
   level:
     com.github.dge1992: debug
 
-###################  Êı¾İÔ´  ###################
 spring:
   datasource:
     url: jdbc:mysql://192.168.0.135:3306/test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
@@ -17,10 +15,22 @@ spring:
     filters: log4j,wall,mergeStat
 
 
-###################  mybatisÅäÖÃ  ###################
-mybatis:
-  type-aliases-package: com.github.dge1992.ssm.domain
-  mapper-locations: classpath:mappers/*.xml
+#mybatis:
+#  type-aliases-package: com.github.dge1992.ssm.domain
+#  mapper-locations: classpath:mappers/*.xml
+#  configuration:
+#    cache-enabled: false
+#    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+mybatis-plus:
+  mapper-locations:  classpath:mappers/*.xml
+  typeAliasesPackage: com.github.dge1992.ssm.domain
+  global-config:
+    id-type: 0  #0:æ•°æ®åº“IDè‡ªå¢   1:ç”¨æˆ·è¾“å…¥id  2:å…¨å±€å”¯ä¸€id(IdWorker)  3:å…¨å±€å”¯ä¸€ID(uuid)
+    db-column-underline: false
+    refresh-mapper: true
   configuration:
-    cache-enabled: false
-    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    map-underscore-to-camel-case: true
+    cache-enabled: true #é…ç½®çš„ç¼“å­˜çš„å…¨å±€å¼€å…³
+    lazyLoadingEnabled: true #å»¶æ—¶åŠ è½½çš„å¼€å…³
+    multipleResultSetsEnabled: true
