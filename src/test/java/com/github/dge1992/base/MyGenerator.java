@@ -26,7 +26,7 @@ public class MyGenerator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
 
-        gc.setOutputDir("E:\\myGithub\\ssm\\ssm\\src\\main\\java\\");//这里写你自己代码的目录
+        gc.setOutputDir("E:\\myGithub111\\ssm\\src\\main\\java\\");//这里写你自己代码的目录
         gc.setFileOverride(true);//是否覆盖
         gc.setActiveRecord(true);// 不需要ActiveRecord特性的请改为false
         gc.setEnableCache(false);// XML 二级缓存
@@ -50,7 +50,7 @@ public class MyGenerator {
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("123456");
-        dsc.setUrl("jdbc:mysql://192.168.0.135:3306/test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true");
+        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/test1?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true");
         mpg.setDataSource(dsc);
 
         // 策略配置

@@ -1,10 +1,14 @@
 package com.github.dge1992.ssm.domain;
 
 import com.baomidou.mybatisplus.enums.IdType;
+import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 
 /**
@@ -13,7 +17,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author dong
- * @since 2018-02-08
+ * @since 2018-02-20
  */
 @TableName("tb_person")
 public class Person extends Model<Person> {
@@ -27,6 +31,25 @@ public class Person extends Model<Person> {
     private Integer age;
     private Integer sex;
     private String address;
+    /**
+     * 创建时间
+     */
+//    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @TableField("create_time")
+    private Date createTime;
+    /**
+     * 更新时间
+     */
+//    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @TableField("update_time")
+    private Date updateTime;
+    /**
+     * 1:正常 0:删除
+     */
+    @TableField("is_del")
+    private Integer isDel;
 
 
     public Integer getId() {
@@ -69,6 +92,30 @@ public class Person extends Model<Person> {
         this.address = address;
     }
 
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Integer getIsDel() {
+        return isDel;
+    }
+
+    public void setIsDel(Integer isDel) {
+        this.isDel = isDel;
+    }
+
     @Override
     protected Serializable pkVal() {
         return this.id;
@@ -82,6 +129,9 @@ public class Person extends Model<Person> {
         ", age=" + age +
         ", sex=" + sex +
         ", address=" + address +
+        ", createTime=" + createTime +
+        ", updateTime=" + updateTime +
+        ", isDel=" + isDel +
         "}";
     }
 }

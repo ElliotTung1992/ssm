@@ -13,7 +13,17 @@ spring:
     username: root
     password: 123456
     filters: log4j,wall,mergeStat
-
+  devtools:
+    restart:
+      enabled: true #是否开启开发者工具（true/false）
+      additional-paths: src/main/java
+      exclude: static/**,WEB-INF/view/**
+  mvc:
+    static-path-pattern: /static/**
+    view:
+      prefix: /WEB-INF/view
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
 
 #mybatis:
 #  type-aliases-package: com.github.dge1992.ssm.domain

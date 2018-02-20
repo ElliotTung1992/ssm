@@ -1,9 +1,0 @@
-CREATE TABLE "tb_person" (
-  "id" int(11) NOT NULL AUTO_INCREMENT,
-  "user_name" varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  "age" int(11) DEFAULT NULL,
-  "sex" tinyint(255) DEFAULT NULL,
-  "address" varchar(255) COLLATE utf8_croatian_ci DEFAULT NULL,
-  PRIMARY KEY ("id"),
-  KEY "age_index" ("age")
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_croatian_ci;

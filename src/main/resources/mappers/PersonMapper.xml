@@ -9,6 +9,10 @@
         <result column="age" property="age" />
         <result column="sex" property="sex" />
         <result column="address" property="address" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="is_del" property="isDel" />
     </resultMap>
+
 
 </mapper>

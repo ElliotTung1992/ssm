@@ -5,9 +5,11 @@ import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.github.dge1992.ssm.domain.Person;
 import com.github.dge1992.ssm.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -43,18 +45,48 @@ public class PersonController {
         return "success";
     }
 
+    /**
+     * 查询person列表
+     * @return
+     */
     @RequestMapping("queryPersonList")
     @ResponseBody
     public Object queryPersonList(){
         List<Person> people = personService.selectList(new EntityWrapper<Person>());
-        int a = 0;
-        System.out.println(a);
-        System.out.println("aaaa");
-        System.out.println("321321321");
-        System.out.println("hehe");
-        System.out.println("dsadsadsa");
-        System.out.println("nihao");
         return people;
+    }
+
+    /**
+     * 根据id查询Person
+     * @param id
+     * @return
+     */
+    @RequestMapping("queryPersonById")
+    @ResponseBody
+    public Object queryPersonById(@RequestParam Integer id){
+        Person person = personService.selectById(id);
+        return person;
+    }
+
+    /**
+     * 根据UserName和age查询person
+     * @return
+     */
+    @RequestMapping("queryPersonByUserNameAndAge/{用户名}/{年龄}")
+    @ResponseBody
+    public Object queryPersonByUserNameAndAge(@PathVariable String 用户名, @PathVariable Integer 年龄){
+        EntityWrapper<Person> entityWrapper = new EntityWrapper<>();
+        entityWrapper.where("user_name = {0}", 用户名);
+        entityWrapper.where("age = {0}", 年龄);
+        Person person = personService.selectOne(entityWrapper);
+        return person;
+    }
+
+    @RequestMapping("addPerson")
+    @ResponseBody
+    public Object addPerson(Person person){
+        personService.insert(person);
+        return "success";
     }
 }
 
