@@ -1,4 +1,8 @@
 
+my:
+  name: dong
+
+
 server:
   port: 8060
 

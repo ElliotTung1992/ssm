@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.github.dge1992.ssm.domain.Person;
 import com.github.dge1992.ssm.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -28,6 +29,9 @@ public class PersonController {
 
     @Autowired
     private IPersonService personService;
+
+    @Value("${my.name}")
+    private String myName;
 
     /**
      * 添加用户
@@ -88,6 +92,16 @@ public class PersonController {
     public Object addPerson(Person person){
         personService.insert(person);
         return "success";
+    }
+
+    /**
+     * 测试自定义属性值
+     * @return
+     */
+    @RequestMapping("testValue")
+    @ResponseBody
+    public Object testValue(){
+        return myName;
     }
 }
 
