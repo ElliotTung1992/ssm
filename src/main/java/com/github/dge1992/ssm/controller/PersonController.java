@@ -66,6 +66,7 @@ public class PersonController {
     public Object queryPersonById(@RequestParam Integer id){
         Person person = personService.selectById(id);
         return person;
+//        return "hello";
     }
 
     /**
