@@ -28,6 +28,7 @@ spring:
       prefix: /WEB-INF/view
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
 
 #mybatis:
 #  type-aliases-package: com.github.dge1992.ssm.domain
