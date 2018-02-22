@@ -7,10 +7,6 @@ server:
   port: 8060
 
 
-logging:
-  level:
-    com.github.dge1992: debug
-
 spring:
   devtools:
     restart:
@@ -57,6 +53,13 @@ spring:
         password: 123456
         filters: log4j,wall,mergeStat
 
+logging:
+  level:
+    root: info
+    com.github.dge1992: debug
+  path: logs/
+  file: dge1992.log
+
 
 ---
 
@@ -67,6 +70,12 @@ spring:
         username: root
         password: 123456
         filters: log4j,wall,mergeStat
+
+logging:
+  level:
+    root: warn
+  path: logs/
+  file: dge1992.log
 
 
 
