@@ -25,7 +25,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/person")
-public class PersonController {
+public class PersonController extends BaseController{
 
     @Autowired
     private IPersonService personService;
@@ -57,7 +57,9 @@ public class PersonController {
     @ResponseBody
     public Object queryPersonList(){
         List<Person> people = personService.selectList(new EntityWrapper<Person>());
-        return people;
+//        return json(people);
+//        return people;
+        return success("大功告成").setData(people);
     }
 
     /**
