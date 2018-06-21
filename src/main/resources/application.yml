@@ -1,6 +1,8 @@
 
 my:
   name: dong
+  age: 26
+  from: ningbo
 
 
 server:
@@ -48,7 +50,7 @@ mybatis-plus:
 spring:
   profiles: dev
   datasource:
-        url: jdbc:mysql://127.0.0.1:3306/test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
+        url: jdbc:mysql://127.0.0.1:3306/demo?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
         username: root
         password: 123456
         filters: log4j,wall,mergeStat
@@ -66,7 +68,7 @@ logging:
 spring:
   profiles: pro
   datasource:
-        url: jdbc:mysql://127.0.0.1:3306/test1?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
+        url: jdbc:mysql://127.0.0.1:3306/demo?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
         username: root
         password: 123456
         filters: log4j,wall,mergeStat

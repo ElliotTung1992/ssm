@@ -9,9 +9,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 public class WebMvcContext extends WebMvcConfigurerAdapter {
 
-    @Override
+    /*@Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addConverter(new DateConverter());
-    }
+    }*/
 
 }

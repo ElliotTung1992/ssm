@@ -2,6 +2,7 @@ package com.github.dge1992.ssm.controller;
 
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.github.dge1992.ssm.domain.ConfigBean;
 import com.github.dge1992.ssm.domain.Person;
 import com.github.dge1992.ssm.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,9 @@ public class PersonController extends BaseController{
 
     @Value("${my.name}")
     private String myName;
+
+    @Autowired
+    private ConfigBean configBean;
 
     /**
      * 添加用户
@@ -104,6 +108,16 @@ public class PersonController extends BaseController{
     @ResponseBody
     public Object testValue(){
         return myName;
+    }
+
+    /**
+     * 测试自定义属性映射到对象
+     * @return
+     */
+    @RequestMapping("/testValueBean")
+    @ResponseBody
+    public Object testValueBean(){
+        return configBean;
     }
 }
 
