@@ -1,19 +1,36 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+
+<!--[if lt IE 7 ]><html xmlns:th="http://www.thymeleaf.org" lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html xmlns:th="http://www.thymeleaf.org" lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html xmlns:th="http://www.thymeleaf.org" lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html xmlns:th="http://www.thymeleaf.org" lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html xmlns:th="http://www.thymeleaf.org" lang="en" class="no-js" > <!--<![endif]-->
 <head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title></title>
+
+    <script src="../webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../webjars/bootstrap/3.3.5/css/bootstrap.min.css" />
+
 </head>
-<body>
 
-<div style="text-align: center;margin:0 auto;width: 1000px; ">
-    <table width="100%" border="1" cellspacing="1" cellpadding="0">
-        <tr th:each="person : ${personList}">
-            <td th:text="${person.userName}">姓名</td>
-            <td th:text="${person.age}">年龄</td>
-        </tr>
-    </table>
+<body style="background-image: none;">
+<div class="body_wrap">
+    <div class="container">
+        <table class="table table-striped table-bordered">
+            <!--/*@thymesVar id="learnList" type=""*/-->
+            <tr th:each="learn : ${personList}" class="text-info">
+                <td th:text="${learn.userName}"></td>
+                <td th:text="${learn.age}"></td>
+            </tr>
+        </table>
+
+    </div>
+    <!--/ container -->
 </div>
-
 </body>
 </html>

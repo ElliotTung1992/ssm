@@ -7,6 +7,7 @@ import com.github.dge1992.ssm.domain.Person;
 import com.github.dge1992.ssm.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -126,11 +127,10 @@ public class PersonController extends BaseController{
      * @return
      */
     @RequestMapping("/testThymeleaf")
-    public ModelAndView testThymeleaf(){
+    public String testThymeleaf(Model model){
         List<Person> personList = personService.selectList(null);
-        ModelAndView modelAndView = new ModelAndView("/testThymeleaf");
-        modelAndView.addObject("personList", personList);
-        return modelAndView;
+        model.addAttribute("personList", personList);
+        return "testThymeleaf";
     }
 }
 

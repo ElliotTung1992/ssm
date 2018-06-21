@@ -13,17 +13,13 @@ spring:
   devtools:
     restart:
       enabled: true #是否开启开发者工具（true/false）
-      additional-paths: src/main/java
-      exclude: static/**,WEB-INF/view/**
-  mvc:
-    static-path-pattern: /static/**
-    view:
-      prefix: /WEB-INF/view
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: Asia/Shanghai
   profiles:
     active: dev
+  thymeleaf:
+    cache: false
 
 #mybatis:
 #  type-aliases-package: com.github.dge1992.ssm.domain
