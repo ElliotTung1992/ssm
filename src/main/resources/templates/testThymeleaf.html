@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<div style="text-align: center;margin:0 auto;width: 1000px; ">
+    <table width="100%" border="1" cellspacing="1" cellpadding="0">
+        <tr th:each="person : ${personList}">
+            <td th:text="${person.userName}">姓名</td>
+            <td th:text="${person.age}">年龄</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

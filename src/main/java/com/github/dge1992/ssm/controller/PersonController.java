@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -118,6 +119,18 @@ public class PersonController extends BaseController{
     @ResponseBody
     public Object testValueBean(){
         return configBean;
+    }
+
+    /**
+     * 测试thymeleaf模板引擎将
+     * @return
+     */
+    @RequestMapping("/testThymeleaf")
+    public ModelAndView testThymeleaf(){
+        List<Person> personList = personService.selectList(null);
+        ModelAndView modelAndView = new ModelAndView("/testThymeleaf");
+        modelAndView.addObject("personList", personList);
+        return modelAndView;
     }
 }
 
