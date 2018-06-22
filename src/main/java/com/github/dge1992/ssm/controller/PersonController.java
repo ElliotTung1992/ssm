@@ -132,5 +132,27 @@ public class PersonController extends BaseController{
         model.addAttribute("personList", personList);
         return "testThymeleaf";
     }
+
+    /**
+     * 测试使用jsp
+     * @return
+     */
+    @RequestMapping("/testJsp")
+    public String testJsp(Model model){
+        List<Person> personList = personService.selectList(null);
+        model.addAttribute("personList", personList);
+        return "testJsp";
+    }
+
+    /**
+     * 测试使用html
+     * @return
+     */
+    @RequestMapping("/testHtml")
+    public String testHtml(Model model){
+        List<Person> personList = personService.selectList(null);
+        model.addAttribute("personList", personList);
+        return "/testHtml.html";
+    }
 }
 

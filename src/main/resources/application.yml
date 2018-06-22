@@ -18,8 +18,10 @@ spring:
     time-zone: Asia/Shanghai
   profiles:
     active: dev
-  thymeleaf:
-    cache: false
+  #mvc:
+    #view:
+      #prefix: /WEB-INF/view/
+      # suffix: .jsp
 
 #mybatis:
 #  type-aliases-package: com.github.dge1992.ssm.domain
