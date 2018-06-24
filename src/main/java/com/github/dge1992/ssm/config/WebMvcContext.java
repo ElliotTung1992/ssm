@@ -1,17 +1,23 @@
 package com.github.dge1992.ssm.config;
 
+
 import org.springframework.context.annotation.Configuration;
-import org.springframework.format.FormatterRegistry;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-//@Configuration
-//@EnableWebMvc
-//public class WebMvcContext extends WebMvcConfigurerAdapter {
-//
-//    /*@Override
-//    public void addFormatters(FormatterRegistry registry) {
-//        registry.addConverter(new DateConverter());
-//    }*/
-//
-//}
+/**
+ * Web配置类
+ */
+@Configuration
+public class WebMvcContext extends WebMvcConfigurerAdapter {
+
+    /**
+     * 配置静态资源访问
+     * @param registry
+     */
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/hello/**").addResourceLocations("classpath:/hello/");
+        super.addResourceHandlers(registry);
+    }
+}

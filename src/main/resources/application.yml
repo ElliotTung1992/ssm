@@ -18,7 +18,8 @@ spring:
     time-zone: Asia/Shanghai
   profiles:
     active: dev
-  #mvc:
+  mvc:
+    static-path-pattern: /static/**
     #view:
       #prefix: /WEB-INF/view/
       # suffix: .jsp
