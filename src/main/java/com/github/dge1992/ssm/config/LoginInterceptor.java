@@ -15,14 +15,15 @@ public class LoginInterceptor implements HandlerInterceptor{
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        boolean flag = false;
+        /*boolean flag = false;
         Person person = (Person) request.getSession().getAttribute("person");
         if(person != null){
             flag = true;
         }else{
             response.sendRedirect("/login/toLogin");
         }
-        return flag;
+        return flag;*/
+        return true;
     }
 
     @Override
